@@ -10,7 +10,7 @@ import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
 @RestController
-@RequestMapping("/v1/api/")
+@RequestMapping("/api/v1/")
 class TaskController(val service: TaskService) {
     @GetMapping("all-tasks")
     fun getAllTasks() : ResponseEntity<List<TaskDto>> = ResponseEntity(service.getAllTasks(), HttpStatus.OK)

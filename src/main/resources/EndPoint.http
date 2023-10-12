@@ -1,0 +1,39 @@
+### Post new Task to the APP
+POST http://localhost:9091/api/v1/create
+Content-Type: application/json
+
+{
+  "description": "Fourth Task - Swim everyday",
+  "isReminderSet" : false,
+  "isTaskOpen": true,
+  "createdOn": "2023-02-12T01:06:32.510",
+  "priority": "MEDIUM"
+}
+
+### GET all tasks from App
+GET http://localhost:9091/api/v1/all-tasks
+
+### GET open tasks from App
+GET http://localhost:9091/api/v1/open-tasks
+
+### GET closed tasks from App
+GET http://localhost:9091/api/v1/closed-tasks
+
+### GET single task from App
+GET http://localhost:9091/api/v1/task/2
+
+### Update a single task to the App
+PATCH http://localhost:9091/api/v1/update/2
+Content-Type: application/json
+
+{
+  "id": 2,
+  "description": "Second Task - Do the job",
+  "isReminderSet": true,
+  "isTaskOpen": false,
+  "createdOn": "2023-04-14T01:06:32.51",
+  "priority": "HIGH"
+}
+
+### Delete task from the App
+DELETE http://localhost:9091/api/v1/delete/3

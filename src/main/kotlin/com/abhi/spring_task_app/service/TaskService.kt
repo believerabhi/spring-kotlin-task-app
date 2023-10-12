@@ -30,7 +30,7 @@ class TaskService(private val repository: TaskRepository) {
         task.isReminderSet = taskCreateRequest.isReminderSet
         task.isTaskOpen = taskCreateRequest.isTaskOpen
         task.createdOn = taskCreateRequest.createdOn
-        task.priority = task.priority
+        task.priority = taskCreateRequest.priority
     }
 
     private fun checkFotTaskId(id : Long) {
