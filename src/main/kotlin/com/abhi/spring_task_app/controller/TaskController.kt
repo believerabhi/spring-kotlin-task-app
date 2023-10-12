@@ -15,10 +15,10 @@ class TaskController(val service: TaskService) {
     @GetMapping("all-tasks")
     fun getAllTasks() : ResponseEntity<List<TaskDto>> = ResponseEntity(service.getAllTasks(), HttpStatus.OK)
 
-    @GetMapping("all-tasks")
+    @GetMapping("open-tasks")
     fun getAllOpenTasks() : ResponseEntity<List<TaskDto>> = ResponseEntity(service.getAllOpenTasks(), HttpStatus.OK)
 
-    @GetMapping("all-tasks")
+    @GetMapping("closed-tasks")
     fun getAllCloseTasks() : ResponseEntity<List<TaskDto>> = ResponseEntity(service.getAllClosedTasks(), HttpStatus.OK)
 
     @GetMapping("task/{id}")
